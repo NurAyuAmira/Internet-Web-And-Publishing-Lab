@@ -1,0 +1,62 @@
+body
+{
+    background-image:url(image/background.jpg);
+    background-size: 200px 200px;
+    
+}
+
+@font-face
+{
+    font-family:myFont1;
+    src:url('GenghisKhanframed-MedObliq.ttf');
+}
+
+@font-face
+{
+    font-family:myFont2;
+    src:url('The Blacklist.ttf');
+}
+
+
+h1
+{
+    font-family:myFont1;
+    font-size: 2em;
+    color:#009922;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+h4
+{
+    font-family:myFont2;
+    font-size: 2em;
+    letter-spacing: 5px;
+    background-color: yellowgreen;
+    color:white;
+    text-shadow: 3px 3px #009922; /*untuk nampakkan shadow letak size */
+}
+
+p
+{
+    font-style: italic;
+}
+
+.labels
+{
+    font: bold blue;
+}
+
+#old-price
+{
+    text-decoration: line-through; /*strike word*/
+    color:black;
+    font-style: none;
+}
+
+#new-price
+{
+    color: red;
+    text-decoration: underline;
+    font-style: none;
+}

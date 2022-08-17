@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head><title>Lab 8</title>
+
+<script type="text/javascript">
+    
+function order_data()
+    {
+        var cust_name, quantity, mug_color, mug_delivery="No", mug_deli_rate=0.00,mug_price,total;
+        
+        cust_name=document.orderfrm.nametxt.value;
+        mug_color=document.orderfrm.mug_colour.value;
+        quantity=parseInt (document.orderfrm.qtytxt.value);
+      
+        
+        if( document.orderfrm.mug_delivery.checked) //if the delivery checkbox is being tick by user
+            {
+                mug_delivery=document.orderfrm.mug_delivery.value; //update to "Yes" status
+                mug_deli_rate=7.00;
+            }
+        
+        mug_price=get_price(mug_color); //call func get_price and pass mug color
+        total = mug_price * quantity;
+        print_bill(cust_name,mug_price,quantity,mug_delivery,mug_deli_rate,total);
+    }
+    
+    
+function get_price(mug_color)
+    {
+        var price;
+        switch(mug_color)
+            {
+                case "1": price=3.50;
+                break;
+                case "2": price=5.90;
+                break;
+                case "3": price=7.50
+                break;
+                default: price=0.00;
+                break;
+            }
+        return price;
+    }
+    
+function print_bill(cust_name,mug_price,quantity,mug_delivery,mug_deli_rate,total)
+    {
+        document.write("<br/>Customer Name  : " + cust_name);
+        document.write("<br/>Mug Price      :RM " + mug_price.toFixed(2));
+        document.write("<br/>Quantity       : " + quantity);
+        document.write("<br/>Mug Delivery   :RM " + mug_deli_rate.toFixed(2)+ "(" + mug_delivery + ")");
+        document.write("<br/>Total          :RM " + total.toFixed(2));
+    }
+    
+</script>
+
+</head>
+
+<body>
+
+<h3>Custom Mug</h3>
+<p>Make a custom order today!</p>
+
+<form name="orderfrm">
+
+	<p>Name : <input type="text" name="nametxt" >
+
+	<p>Colour
+	<input type="radio" name="mug_colour" value="1">Royal Blue (RM 3.50)
+	<input type="radio" name="mug_colour" value="2">Red and Orange (RM 5.90)
+	<input type="radio" name="mug_colour" value="3">Gold (RM 7.50)
+
+	<p>Quantity : <input type="text" name="qtytxt" >	
+	
+	<p>Delivery : <input type="checkbox" name="mug_delivery" value="Yes">Check if delivery is required
+
+	<p><input type="button" name="sendbtn" value="Send Order" onclick="order_data();" />
+
+</form>
+
+
+</body>
+
+</html>

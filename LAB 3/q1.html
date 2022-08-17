@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Sign-Up</title>
+</head>
+
+<body> 
+<h4>Register for a New Account</h4>
+<form name="RegisName" method="post" action="">
+<fieldset>
+<p>NAME     :<input type="text" name="Name" placeholder="Type your name here" maxlength="55" size="50"/></p>
+<p>PASSWORD :<input type="password" name="Pass"/></p>
+<p>EMAIL :<input type="email" name="Email"/></p>
+<p>ACCOUNT TYPE:<input type="radio" name="AccType" value="member"/>Member
+                <input type="radio" name="AccType" value="retailer"/>Retailer
+</p>
+<p>If you are retailer,describe your business :</p>
+<p><textarea name="RetDesc" cols="60" rows="4">Write your description here..</textarea></p>
+<p>Your Birthday :<input type="date" name="BirthDate" min="2000-12-12"/>
+<p>How did you hear about us? <input type="checkbox" name="SocMed" value="Search engine"/>Search Engine
+                              <input type="checkbox" name="SocMed" value="Facebook"/>Facebook
+							  <input type="checkbox" name="SocMed" value="Friends"/>Friends
+							  <input type="checkbox" name="SocMed" value="Other"/>Other
+</p>
+<p><input type="submit" name="btnSignUp" value="SIGN UP"/>
+</fieldset>
+</form>
+</body>
+</html>

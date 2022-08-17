@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Add New Product Details</title>
+</head>
+
+<body> 
+
+<form name="RegisProd" method="post">
+<fieldset>
+
+<legend>Product Details</legend>
+
+<p>Product Name: </br>
+<input type="text" name="ProdName" size="50"/>
+</p>
+
+
+<p>Product Code:
+<input type="text" name="ProdCode"/>
+</p>
+
+<p>Available Size:
+<input type="checkbox" name="Size" value="small"/>Small
+<input type="checkbox" name="Size" value="medium"/>Medium
+<input type="checkbox" name="Size" value="large"/>Large
+</p>
+
+<p>Colour:
+<input type="color" name="Colour" value="#123ABC" />
+</p>
+
+<p>Stock:
+<input type="number" name="Stock" min="10" max="120"/>
+</p> 
+
+<p>Re-order Level: 
+<input type="range" name="ReorderLvl" min="20" max="100" />
+</p>
+
+<p>Product image: <input type="file" name="Image" multiple/></p>
+
+<p><input type="submit" name="Save" value="Save Product"/>
+
+</fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head><title>Lab 6</title>
+<style>
+#login-title
+    {
+        height: 40px;
+        background-color: #DDD;
+        background-image: url(image/padlock.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        
+    }
+
+#login-form
+    {
+        padding:10px;
+        text-align: center;
+    }
+    
+#login-form input[type=email],[type=password]
+    {
+        width: 250px; height: 25px;
+        border: 1px solid #DDD;
+        border-radius: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 40px;
+    }
+
+#login-form input[type=email]
+    {
+        background-image:url(image/email.png);
+        background-repeat: no-repeat;
+        background size:20px;
+        background-position: 10px 10px;
+        
+    }
+    
+#login-form input[type=password]
+    {
+        background-image: url(image/key.png);
+        background-repeat: no-repeat;
+        background size:20px;
+        background-position: 10px 10px;
+    }
+    
+#login-form input[type=submit]
+    {
+        background-color: #0066FF;
+        color:white;
+        font-weight: bold;
+        width:300px;
+        padding: 10px;
+    }
+    
+#login-form input [type=submit] a:hover
+    {
+        background-color: #2C61B7;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div>
+
+	<div id="login-title">
+		<h4>Login Panel</h4>
+	</div>
+	
+	<div id="login-form">
+		<form name="loginfrm">
+			<p><input type="email" name="user_email" /></p>
+			<p><input type="password" name="user_password" /></p>
+			<p><input type="submit" name="loginbtn" value="LOGIN" /></p>
+		</form>
+		
+		<p><a href="#">Forgot your password?</a></p>
+		
+	</div>
+	
+	
+</div>
+
+
+</body>
+
+</html>
